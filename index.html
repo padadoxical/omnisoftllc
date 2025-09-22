@@ -1,378 +1,162 @@
-import React from "react";
-import { MotionConfig, motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, Cpu, ShieldCheck, Cloud, Layers } from "lucide-react";
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omnisoft LLC</title>
+  <meta name="description" content="Small business IT Support that just works." />
+  <style>
+    :root { --ink:#0b1220; --muted:#5b6470; --brand:#0ea5a4; --cta:#f97316; }
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--ink);background:#fff}
+    .wrap{max-width:1120px;margin:0 auto;padding:20px}
+    .nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #edf1f5}
+    .row{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700}
+    .logo-badge{height:36px;width:36px;border-radius:12px;background:linear-gradient(135deg,#ff7a1a,#ff9b42)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:.75rem 1rem;border-radius:14px;font-weight:600;text-decoration:none}
+    .btn-cta{background:var(--cta);color:#fff}
+    .btn-ghost{border:1px solid #d7dde5;color:#1f2a37}
+    .hero{padding:72px 0;background:linear-gradient(#fff, #f5fbfb)}
+    h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0}
+    p.lead{font-size:1.1rem;color:var(--muted);max-width:720px}
+    .section{padding:36px 0}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .card{border:1px solid #eaecf0;border-radius:18px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+    .card h3{margin:0;font-size:1.1rem}
+    .pad{padding:16px 18px}
+    ul.clean{list-style:none;padding-left:0;margin:10px 0 0 0}
+    ul.clean li{display:flex;gap:8px;align-items:flex-start;margin:.35rem 0;color:#374151}
+    .muted{color:#5b6470}
+    .foot{padding:32px 0;border-top:1px solid #edf1f5;color:#6b7280;font-size:.9rem}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap row">
+      <div class="logo"><div class="logo-badge"></div><div>Omnisoft LLC</div></div>
+      <nav><a class="btn btn-ghost" href="#contact">Get a quote</a></nav>
+    </div>
+  </header>
 
-// Embedded logo data URI so the ribbon logo renders crisply without external fetches
-const LOGO_DATA_URI = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQEAAABGCAIAAABDpLbKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADs";
-
-// Logo in the top ribbon
-function Logo() {
-  return (
-    <a href="#" className="flex items-center gap-2 md:gap-3 shrink-0" aria-label="Omnisoft LLC home">
-      <img src={LOGO_DATA_URI} alt="Omnisoft logo" className="h-8 w-8 md:h-10 md:w-10 rounded-xl" />
-      <span className="text-base md:text-xl font-semibold tracking-tight">Omnisoft LLC</span>
-    </a>
-  );
-}
-
-const navItems = [
-  { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
-];
-
-const services = [
-  {
-    icon: <Cloud className="h-6 w-6" />,
-    title: "Microsoft 365 Setup",
-    desc: "Set up and support for Microsoft email and apps. Simple, secure, and ready for your team.",
-    bullets: [
-      "Outlook and Microsoft 365 email setup",
-      "New user accounts and permissions",
-      "Devices and basic security settings",
-    ],
-  },
-  {
-    icon: <Layers className="h-6 w-6" />,
-    title: "Knowledge Bases",
-    desc: "Spaces that non technical folks can actually use, clear templates, permissions, searches.",
-    bullets: [
-      "Move physical documentation to a digital infrastructure on Confluence",
-      "Template setups",
-      "User training",
-    ],
-  },
-  {
-    icon: <ShieldCheck className="h-6 w-6" />,
-    title: "IT Support as a Service",
-    desc: "Pay for what you need. IT support that is dedicated to your business for a set number of hours. Talk to a person, not a robot.",
-    bullets: [],
-  },
-  {
-    icon: <Cpu className="h-6 w-6" />,
-    title: "Small Business IT",
-    desc: "PC setup, backups, networking, and vendor wrangling so you can get back to work.",
-    bullets: [
-      "Workstation buildouts",
-      "Backup and recovery",
-      "Printers and WiFi setup",
-    ],
-  },
-];
-
-const tiers = [
-  {
-    name: "First Time Install (1 to 3 PCs)",
-    price: "Free consultation",
-    sub: "2 hour minimum • Discovery process to see how we can help",
-    features: [
-      "Flat 2 hour service on site or remote setup",
-      "Technology infrastructure setup",
-      "User accounts and updates",
-      "Each additional hour: $60",
-    ],
-    cta: "Book an appointment",
-  },
-  {
-    name: "Small Business Setup (3 to 5 PCs)",
-    price: "4 hr minimum",
-    sub: "$60/hr beyond minimum",
-    features: [
-      "Set up 3 to 5 PCs",
-      "IT support setting up new PCs and onboarding new team members",
-      "Set up printers",
-      "Connect PCs to the business internet",
-      "Technology vendor coordination and support",
-      "Microsoft asset setup",
-      "Each additional hour: $60",
-    ],
-    cta: "Book an appointment",
-  },
-  {
-    name: "Intermediate Setup Support (4 to 10 PCs)",
-    price: "40 hr minimum",
-    sub: "$60/hr",
-    features: [
-      "Asset licensing support and setup assistance.",
-      "Onboarding new or existing employees to new or existing systems.",
-      "Microsoft asset setup assistance.",
-      "Each additional hour: $60",
-    ],
-    cta: "Book an appointment",
-  },
-  {
-    name: "IT Support as a Service",
-    price: "Monthly billing",
-    sub: "Pay for what you need",
-    features: [
-      "Dedicated IT support for your business",
-      "Pick a set number of hours a month",
-      "Talk to a person, not a robot",
-    ],
-    cta: "Book an appointment",
-  },
-];
-
-function Nav() {
-  return (
-    <nav className="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/60 border-b border-black/5">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          <Logo />
-          <div className="hidden md:flex items-center gap-8">
-            {navItems.map((n) => (
-              <a key={n.href} href={n.href} className="text-sm font-medium text-gray-700 hover:text-gray-900">
-                {n.label}
-              </a>
-            ))}
-          </div>
-          <div className="flex items-center gap-2">
-            <a href="#contact"><Button className="bg-orange-500 hover:bg-orange-600 text-white">Get a Quote</Button></a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-}
-
-function Hero() {
-  return (
-    <section className="relative overflow-hidden pt-28 pb-20 bg-gradient-to-b from-white via-cyan-50 to-white">
-      <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-orange-200/40 blur-3xl" />
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-            Small business IT Support that just <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">works</span>.
-          </h1>
-          <p className="mt-4 text-lg text-gray-700">
-            Microsoft 365 management, new hire onboarding, and painless hardware refreshes. Omnisoft keeps your stack tidy, secure, and fast.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a href="#pricing"><Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">See Pricing</Button></a>
-            <a href="#services"><Button size="lg" variant="outline" className="border-cyan-600 text-cyan-700 hover:bg-cyan-50">What we do</Button></a>
-          </div>
-          <div className="mt-6 text-sm text-gray-600">
-            Serving Central Virginia • Remote nationwide • Insured & documented processes
-          </div>
-        </motion.div>
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-          <div className="relative">
-            <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-orange-400 to-cyan-500 opacity-30 blur-xl" />
-            <Card className="relative rounded-3xl">
-              <CardHeader>
-                <CardTitle>Quick Wins We Deliver</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 text-sm">
-                  {[
-                    "Microsoft support",
-                    "Confluence support and digitized paper business documentation",
-                    "IT support as a service",
-                  ].map((t) => (
-                    <li key={t} className="flex items-start gap-2">
-                      <Check className="h-4 w-4 mt-0.5 text-orange-500" />
-                      <span className="text-gray-700">{t}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </motion.div>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Small business IT Support that just works.</h1>
+        <p class="lead">Microsoft 365 management, new hire onboarding, and painless hardware refreshes. Omnisoft keeps your stack tidy, secure, and fast.</p>
+        <p style="margin-top:16px"><a class="btn btn-cta" href="#contact">Book an appointment</a></p>
+        <p class="muted" style="margin-top:10px">Serving Central Virginia • Remote nationwide • Insured & documented processes</p>
       </div>
     </section>
-  );
-}
 
-function Services() {
-  return (
-    <section id="services" className="py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">Services</h2>
-          <p className="mt-3 text-gray-700">Clear, documented, and right sized for your team.</p>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s) => (
-            <Card key={s.title} className="rounded-2xl">
-              <CardHeader className="space-y-2">
-                <div className="inline-flex items-center justify-center h-10 w-10 rounded-xl bg-cyan-50 text-cyan-700">{s.icon}</div>
-                <CardTitle className="text-lg">{s.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-700">{s.desc}</p>
-                <ul className="mt-4 space-y-2 text-sm">
-                  {s.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2">
-                      <Check className="h-4 w-4 mt-0.5 text-cyan-600" />
-                      <span className="text-gray-700">{b}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+    <section class="wrap section" id="services">
+      <h2>Services</h2>
+      <p class="muted">Clear, documented, and right sized for your team.</p>
+      <div class="cards" style="margin-top:12px">
+        <div class="card"><div class="pad">
+          <h3>Microsoft 365 Setup</h3>
+          <ul class="clean">
+            <li>Outlook & email setup</li>
+            <li>User accounts & permissions</li>
+            <li>Devices and basic security settings</li>
+          </ul>
+        </div></div>
+        <div class="card"><div class="pad">
+          <h3>Knowledge Bases</h3>
+          <ul class="clean">
+            <li>Confluence or SharePoint spaces people actually use</li>
+            <li>Clear templates, permissions, and search</li>
+            <li>Digitize paper documentation</li>
+          </ul>
+        </div></div>
+        <div class="card"><div class="pad">
+          <h3>IT Support as a Service</h3>
+          <ul class="clean">
+            <li>Dedicated hours, monthly</li>
+            <li>Pay for what you need</li>
+            <li>Talk to a person, not a robot</li>
+          </ul>
+        </div></div>
       </div>
     </section>
-  );
-}
 
-
-function Pricing() {
-  return (
-    <section id="pricing" className="py-20 bg-gradient-to-b from-white to-orange-50/40">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">Pricing</h2>
-          <p className="mt-3 text-gray-700">Simple minimums with transparent hourly rates. No surprises.</p>
-          <p className="mt-2 text-gray-700 max-w-3xl mx-auto">At Omnisoft, all packages include a free one time consultation called a "discovery call." In this call we establish your current practices and explore the best options for how we can assist.</p>
-        </div>
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-          {tiers.map((t) => (
-            <Card key={t.name} className="rounded-2xl border-black/10 h-full flex flex-col">
-              <CardHeader className="space-y-1">
-                {t.badge && (
-                  <span className="self-start rounded-full bg-orange-100 text-orange-700 text-xs px-2 py-0.5">{t.badge}</span>
-                )}
-                <CardTitle className="text-lg">{t.name}</CardTitle>
-                <div className="text-2xl font-bold">{t.price}</div>
-                {t.sub && <div className="text-xs text-gray-600">{t.sub}</div>}
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm">
-                  {t.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2">
-                      <Check className="h-4 w-4 mt-0.5 text-orange-500" />
-                      <span className="text-gray-700">{f}</span>
-                    </li>
-                  ))}
-                </ul>
-                <a href="#contact"><Button className="w-full mt-auto bg-cyan-600 hover:bg-cyan-700 text-white">{t.cta}</Button></a>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-        <div className="mt-10">
-          <Card className="rounded-2xl">
-            <CardHeader>
-              <CardTitle>Knowledge Base</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-gray-700">Move existing business data, policies, and reports from paper copies to digital media. We can help you set this up in Confluence or SharePoint.</p>
-              <ul className="mt-4 space-y-2 text-sm text-gray-700">
-                <li className="flex items-start gap-2"><Check className="h-4 w-4 mt-0.5 text-orange-500" /><span>Assistance standing up and managing a Confluence page</span></li>
-                <li className="flex items-start gap-2"><Check className="h-4 w-4 mt-0.5 text-orange-500" /><span>Convert JIRA knowledge base tickets into Confluence pages</span></li>
-                <li className="flex items-start gap-2"><Check className="h-4 w-4 mt-0.5 text-orange-500" /><span>Assistance standing up SharePoint pages for easier Teams navigation</span></li>
-                <li className="flex items-start gap-2"><Check className="h-4 w-4 mt-0.5 text-orange-500" /><span>Converting paper records into digital media</span></li>
-              </ul>
-              <a href="#contact"><Button className="mt-4 bg-cyan-600 hover:bg-cyan-700 text-white">Book an appointment</Button></a>
-            </CardContent>
-          </Card>
-        </div>
-        <p className="mt-6 text-center text-xs text-gray-600">
-          Project based work and monthly managed IT are available. Travel is billed at cost when an on site visit is requested.
-        </p>
-        <p className="mt-2 text-center text-xs font-medium text-gray-700">
-          Customized quotes based on business needs.
-        </p>
+    <section class="wrap section" id="pricing">
+      <h2>Pricing</h2>
+      <p class="muted">Simple minimums with transparent hourly rates. No surprises.</p>
+      <p class="muted" style="margin-top:8px">All packages include a free discovery call to review your current practices and the best options to help.</p>
+      <div class="cards" style="margin-top:12px">
+        <div class="card"><div class="pad">
+          <h3>First Time Install (1–3 PCs)</h3>
+          <ul class="clean">
+            <li>Free consultation (2hr minimum)</li>
+            <li>On-site or remote setup</li>
+            <li>Technology infrastructure setup</li>
+            <li>User accounts and updates</li>
+            <li>Each additional hour: $60</li>
+          </ul>
+          <p style="margin-top:12px"><a class="btn btn-cta" href="#contact">Book an appointment</a></p>
+        </div></div>
+        <div class="card"><div class="pad">
+          <h3>Small Business Setup (3–5 PCs)</h3>
+          <ul class="clean">
+            <li>4 hr minimum ($60/hr beyond minimum)</li>
+            <li>New PCs and onboarding</li>
+            <li>Printers & business internet</li>
+            <li>Vendor coordination</li>
+            <li>Microsoft asset setup</li>
+            <li>Each additional hour: $60</li>
+          </ul>
+          <p style="margin-top:12px"><a class="btn btn-cta" href="#contact">Book an appointment</a></p>
+        </div></div>
+        <div class="card"><div class="pad">
+          <h3>Intermediate Setup (4–10 PCs)</h3>
+          <ul class="clean">
+            <li>40 hr minimum ($60/hr)</li>
+            <li>Asset licensing support & setup assistance</li>
+            <li>Onboarding to new or existing systems</li>
+            <li>Microsoft asset setup assistance</li>
+            <li>Each additional hour: $60</li>
+          </ul>
+          <p style="margin-top:12px"><a class="btn btn-cta" href="#contact">Book an appointment</a></p>
+        </div></div>
+        <div class="card"><div class="pad">
+          <h3>IT Support as a Service</h3>
+          <ul class="clean">
+            <li>Monthly billing • Pay for what you need</li>
+            <li>Dedicated IT support for your business</li>
+            <li>Pick a set number of hours a month</li>
+            <li>Talk to a person, not a robot</li>
+          </ul>
+          <p style="margin-top:12px"><a class="btn btn-cta" href="#contact">Book an appointment</a></p>
+        </div></div>
       </div>
+
+      <div class="card" style="margin-top:16px"><div class="pad">
+        <h3>Knowledge Base</h3>
+        <p class="muted">Move business data, policies, and reports from paper to digital. We can help set this up in Confluence or SharePoint.</p>
+        <ul class="clean">
+          <li>Stand up and manage a Confluence page</li>
+          <li>Convert JIRA KB tickets into Confluence pages</li>
+          <li>Stand up SharePoint pages for easier Teams navigation</li>
+          <li>Convert paper records into digital media</li>
+        </ul>
+        <p style="margin-top:12px"><a class="btn btn-cta" href="#contact">Book an appointment</a></p>
+      </div></div>
+
+      <p class="muted" style="margin-top:12px">Project work and monthly managed IT available. Customized quotes based on business needs.</p>
     </section>
-  );
-}
 
-function About() {
-  return (
-    <section id="about" className="py-20">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold">Why Omnisoft?</h2>
-        <p className="mt-4 text-gray-700 leading-relaxed">
-          We are a small business IT firm. We believe every business deserves technology that works without the headaches and hassle of day to day management. Let us manage your technology so you can focus on what matters to you.
-        </p>
-        <div className="mt-8 grid sm:grid-cols-3 gap-4 text-left">
-          {["Documented SOPs", "Security minded defaults", "Friendly, plain English help"].map((h) => (
-            <div key={h} className="rounded-2xl border p-4 bg-white/60">
-              <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-cyan-700" /><span className="font-medium">{h}</span></div>
-            </div>
-          ))}
-        </div>
-      </div>
+    <section id="contact" class="wrap section">
+      <div class="card"><div class="pad">
+        <h2>Get a Quote</h2>
+        <p class="muted">Tell us what you’re trying to accomplish—we’ll reply the same day.</p>
+        <p><a class="btn btn-cta" href="mailto:hello@omnisoftllc.org">hello@omnisoftllc.org</a></p>
+      </div></div>
     </section>
-  );
-}
+  </main>
 
-function Contact() {
-  return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-cyan-50/60 to-white">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold">Get a Quote</h2>
-          <p className="mt-3 text-gray-700">Tell us what you’re trying to accomplish—we’ll reply with options the same day.</p>
-        </div>
-        <Card className="rounded-2xl">
-          <CardContent className="pt-6">
-            <form className="grid gap-4">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="text-sm font-medium">Name</label>
-                  <input className="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Jane Doe" />
-                </div>
-                <div>
-                  <label className="text-sm font-medium">Email</label>
-                  <input className="mt-1 w-full rounded-xl border px-3 py-2" placeholder="you@company.com" />
-                </div>
-              </div>
-              <div>
-                <label className="text-sm font-medium">Company</label>
-                <input className="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Your LLC / Inc." />
-              </div>
-              <div>
-                <label className="text-sm font-medium">What do you need?</label>
-                <textarea className="mt-1 w-full rounded-xl border px-3 py-2 min-h-[120px]" placeholder="e.g., set up M365 mail, fix DNS, create knowledge base, automate tasks..." />
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="text-xs text-gray-600">Or email us directly: <a className="underline" href="mailto:hello@omnisoftllc.org">hello@omnisoftllc.org</a></div>
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white">Send</Button>
-              </div>
-            </form>
-          </CardContent>
-        </Card>
-      </div>
-    </section>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="py-12 border-t bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <Logo />
-        <div className="text-sm text-gray-600">© {new Date().getFullYear()} Omnisoft LLC • Central Virginia • <a className="underline" href="mailto:hello@omnisoftllc.org">hello@omnisoftllc.org</a></div>
-        <div className="flex items-center gap-4 text-sm">
-          <a href="#services" className="hover:underline">Services</a>
-          <a href="#pricing" className="hover:underline">Pricing</a>
-          <a href="#contact" className="hover:underline">Contact</a>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
-export default function OmnisoftLanding() {
-  return (
-    <MotionConfig reducedMotion="user">
-      <div className="min-h-screen bg-white text-gray-900 antialiased">
-        <Nav />
-        <Hero />
-        <Services />
-        <Pricing />
-        <About />
-        <Contact />
-        <Footer />
-      </div>
-    </MotionConfig>
-  );
-}
+  <footer class="foot">
+    <div class="wrap">© <span id="y"></span> Omnisoft LLC — Central Virginia</div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
