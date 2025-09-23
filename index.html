@@ -11,12 +11,12 @@
 <body class="bg-white text-gray-900 antialiased">
   <!-- NAV -->
   <nav class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/75 border-b border-black/5">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="h-20 md:h-24 flex items-center justify-between">
-        <!-- Logo only (replaces text) -->
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="h-20 md:h-24 flex items-center justify-between">
+        <!-- Logo only -->
         <a href="#" aria-label="Omnisoft LLC home" class="shrink-0">
-          <<img src="assets/logo.png" alt="Omnisoft LLC" class="h-16 md:h-20 w-auto object-contain" />
-          <span class="sr-only">Omnisoft LLC</span>
+          <!-- Make sure your image exists at /assets/logo.png and is tightly cropped -->
+          <img src="assets/logo.png" alt="Omnisoft LLC" class="h-16 md:h-20 w-auto object-contain" />
         </a>
 
         <div class="hidden md:flex items-center gap-6">
@@ -26,7 +26,7 @@
         </div>
 
         <a href="#contact"
-           class="inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold border border-black/10 text-gray-800 hover:bg-gray-50">
+           class="inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold border border-black/10 text-gray-800 hover:bg-gray-50 shadow-sm hover:shadow transition">
           Get a quote
         </a>
       </div>
@@ -34,7 +34,7 @@
   </nav>
 
   <!-- HERO -->
-  <section class="relative overflow-hidden pt-28 pb-16 bg-gradient-to-b from-white via-cyan-50 to-white">
+  <section class="relative overflow-hidden pt-28 md:pt-32 pb-16 bg-gradient-to-b from-white via-cyan-50 to-white">
     <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-orange-200/40 blur-3xl"></div>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
       <div>
@@ -47,11 +47,11 @@
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="#pricing"
-             class="inline-flex items-center justify-center rounded-2xl px-5 py-2.5 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600">
+             class="inline-flex items-center justify-center rounded-2xl px-5 py-2.5 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg active:translate-y-px transition">
             Book an appointment
           </a>
           <a href="#services"
-             class="inline-flex items-center justify-center rounded-2xl px-5 py-2.5 text-sm font-semibold border border-cyan-600 text-cyan-700 hover:bg-cyan-50">
+             class="inline-flex items-center justify-center rounded-2xl px-5 py-2.5 text-sm font-semibold border border-cyan-600 text-cyan-700 hover:bg-cyan-50 shadow-sm hover:shadow transition">
             What we do
           </a>
         </div>
@@ -60,7 +60,7 @@
         </div>
       </div>
 
-      <!-- “Pop-out” card -->
+      <!-- Pop-out card -->
       <div class="relative">
         <div class="absolute -inset-3 rounded-3xl bg-gradient-to-r from-orange-400 to-cyan-500 opacity-40 blur-2xl"></div>
         <div class="relative rounded-3xl bg-white/90 backdrop-blur ring-1 ring-black/5 shadow-2xl">
@@ -85,30 +85,36 @@
         <p class="mt-3 text-gray-700">Clear, documented, and right sized for your team.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="border border-black/10 rounded-2xl bg-white shadow-sm"><div class="p-6">
-          <h3 class="text-lg font-semibold">Microsoft 365 Setup</h3>
-          <ul class="mt-3 space-y-2 text-sm text-gray-700">
-            <li>Outlook & email setup</li>
-            <li>User accounts & permissions</li>
-            <li>Devices and basic security settings</li>
-          </ul>
-        </div></div>
-        <div class="border border-black/10 rounded-2xl bg-white shadow-sm"><div class="p-6">
-          <h3 class="text-lg font-semibold">Knowledge Bases</h3>
-          <ul class="mt-3 space-y-2 text-sm text-gray-700">
-            <li>Confluence or SharePoint spaces people actually use</li>
-            <li>Clear templates, permissions, and search</li>
-            <li>Digitize paper documentation</li>
-          </ul>
-        </div></div>
-        <div class="border border-black/10 rounded-2xl bg-white shadow-sm"><div class="p-6">
-          <h3 class="text-lg font-semibold">IT Support as a Service</h3>
-          <ul class="mt-3 space-y-2 text-sm text-gray-700">
-            <li>Dedicated hours, monthly</li>
-            <li>Pay for what you need</li>
-            <li>Talk to a person, not a robot</li>
-          </ul>
-        </div></div>
+        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1">
+          <div class="p-6">
+            <h3 class="text-lg font-semibold">Microsoft 365 Setup</h3>
+            <ul class="mt-3 space-y-2 text-sm text-gray-700">
+              <li>Outlook & email setup</li>
+              <li>User accounts & permissions</li>
+              <li>Devices and basic security settings</li>
+            </ul>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1">
+          <div class="p-6">
+            <h3 class="text-lg font-semibold">Knowledge Bases</h3>
+            <ul class="mt-3 space-y-2 text-sm text-gray-700">
+              <li>Confluence or SharePoint spaces people actually use</li>
+              <li>Clear templates, permissions, and search</li>
+              <li>Digitize paper documentation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1">
+          <div class="p-6">
+            <h3 class="text-lg font-semibold">IT Support as a Service</h3>
+            <ul class="mt-3 space-y-2 text-sm text-gray-700">
+              <li>Dedicated hours, monthly</li>
+              <li>Pay for what you need</li>
+              <li>Talk to a person, not a robot</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -119,12 +125,14 @@
       <div class="text-center mb-10">
         <h2 class="text-3xl md:text-4xl font-bold">Pricing</h2>
         <p class="mt-3 text-gray-700">Simple minimums with transparent hourly rates. No surprises.</p>
-        <p class="mt-2 text-gray-700 max-w-3xl mx-auto">All packages include a free discovery call to review your current practices and the best options to help.</p>
+        <p class="mt-2 text-gray-700 max-w-3xl mx-auto">
+          All packages include a free discovery call to review your current practices and the best options to help.
+        </p>
       </div>
 
       <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
         <!-- Tier 1 -->
-        <div class="border border-black/10 rounded-2xl bg-white shadow-sm h-full flex flex-col">
+        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1 h-full flex flex-col">
           <div class="p-6 space-y-1">
             <h3 class="text-lg font-semibold">First Time Install (1–3 PCs)</h3>
             <div class="text-2xl font-bold">Free consultation</div>
@@ -138,14 +146,14 @@
               <li>Each additional hour: $60</li>
             </ul>
             <a href="#contact"
-               class="mt-6 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 w-full">
+               class="mt-6 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg active:translate-y-px transition w-full">
               Book an appointment
             </a>
           </div>
         </div>
 
         <!-- Tier 2 -->
-        <div class="border border-black/10 rounded-2xl bg-white shadow-sm h-full flex flex-col">
+        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1 h-full flex flex-col">
           <div class="p-6 space-y-1">
             <h3 class="text-lg font-semibold">Small Business Setup (3–5 PCs)</h3>
             <div class="text-2xl font-bold">4 hr minimum</div>
@@ -160,14 +168,14 @@
               <li>Each additional hour: $60</li>
             </ul>
             <a href="#contact"
-               class="mt-6 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 w-full">
+               class="mt-6 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg active:translate-y-px transition w-full">
               Book an appointment
             </a>
           </div>
         </div>
 
         <!-- Tier 3 -->
-        <div class="border border-black/10 rounded-2xl bg-white shadow-sm h-full flex flex-col">
+        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1 h-full flex flex-col">
           <div class="p-6 space-y-1">
             <h3 class="text-lg font-semibold">Intermediate Setup (4–10 PCs)</h3>
             <div class="text-2xl font-bold">40 hr minimum</div>
@@ -181,14 +189,14 @@
               <li>Each additional hour: $60</li>
             </ul>
             <a href="#contact"
-               class="mt-6 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 w-full">
+               class="mt-6 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg active:translate-y-px transition w-full">
               Book an appointment
             </a>
           </div>
         </div>
 
         <!-- Tier 4 -->
-        <div class="border border-black/10 rounded-2xl bg-white shadow-sm h-full flex flex-col">
+        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1 h-full flex flex-col">
           <div class="p-6 space-y-1">
             <h3 class="text-lg font-semibold">IT Support as a Service</h3>
             <div class="text-2xl font-bold">Monthly billing</div>
@@ -201,15 +209,15 @@
               <li>Talk to a person, not a robot</li>
             </ul>
             <a href="#contact"
-               class="mt-6 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 w-full">
+               class="mt-6 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg active:translate-y-px transition w-full">
               Book an appointment
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Knowledge Base tile under pricing -->
-      <div class="mt-8 border border-black/10 rounded-2xl bg-white shadow-sm">
+      <!-- Knowledge Base tile -->
+      <div class="mt-8 rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1">
         <div class="p-6">
           <h3 class="text-lg font-semibold">Knowledge Base</h3>
           <p class="mt-2 text-sm text-gray-700">
@@ -222,7 +230,7 @@
             <li>Convert paper records into digital media</li>
           </ul>
           <a href="#contact"
-             class="mt-4 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600">
+             class="mt-4 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg active:translate-y-px transition">
             Book an appointment
           </a>
         </div>
@@ -241,7 +249,7 @@
         <h2 class="text-3xl md:text-4xl font-bold">Get a Quote</h2>
         <p class="mt-3 text-gray-700">Tell us what you are trying to accomplish and we will reply with options the same day.</p>
       </div>
-      <div class="border border-black/10 rounded-2xl bg-white shadow-sm">
+      <div class="rounded-2xl border border-black/10 bg-white shadow-md">
         <div class="p-6">
           <form class="grid gap-4">
             <div class="grid md:grid-cols-2 gap-4">
@@ -263,7 +271,7 @@
                 <a class="underline ml-1" href="mailto:hello@omnisoftllc.org">hello@omnisoftllc.org</a>
               </div>
               <button type="submit"
-                      class="inline-flex items-center justify-center rounded-2xl px-5 py-2.5 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600">
+                      class="inline-flex items-center justify-center rounded-2xl px-5 py-2.5 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg active:translate-y-px transition">
                 Send
               </button>
             </div>
@@ -275,23 +283,45 @@
 
   <!-- FOOTER -->
   <footer class="py-12 border-t bg-white">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-    <a href="#" class="flex items-center gap-3">
-      <img src="assets/logo.png" alt="Omnisoft LLC" class="h-10 md:h-12 w-auto object-contain shrink-0" />
-      <span class="sr-only">Omnisoft LLC</span>
-    </a>
-    <div class="text-sm text-gray-600">
-      © <span id="y"></span> Omnisoft LLC • Central Virginia •
-      <a class="underline" href="mailto:hello@omnisoftllc.org">hello@omnisoftllc.org</a>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <a href="#" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="Omnisoft LLC" class="h-10 md:h-12 w-auto object-contain shrink-0" />
+        <span class="sr-only">Omnisoft LLC</span>
+      </a>
+      <div class="text-sm text-gray-600">© <span id="y"></span> Omnisoft LLC • Central Virginia •
+        <a class="underline" href="mailto:hello@omnisoftllc.org">hello@omnisoftllc.org</a></div>
+      <div class="flex items-center gap-4 text-sm">
+        <a href="#services" class="hover:underline">Services</a>
+        <a href="#pricing" class="hover:underline">Pricing</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </div>
     </div>
-    <div class="flex items-center gap-4 text-sm">
-      <a href="#services" class="hover:underline">Services</a>
-      <a href="#pricing" class="hover:underline">Pricing</a>
-      <a href="#contact" class="hover:underline">Contact</a>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <!-- Wire up booking CTAs -->
+  <script>
+    // 🔗 Set this to your real booking URL (Calendly, Squarespace Scheduling, etc.)
+    const BOOKING_URL = "https://calendly.com/your-handle/discovery-call";
+
+    // Rewire common CTAs to open in a new tab
+    document.querySelectorAll('a,button').forEach(el => {
+      const txt = (el.textContent || "").trim().toLowerCase();
+      if (["book an appointment","book it"].includes(txt)) {
+        if (el.tagName.toLowerCase() === "a") {
+          el.href = BOOKING_URL;
+          el.target = "_blank";
+          el.rel = "noopener";
+        } else {
+          el.addEventListener("click", e => {
+            e.preventDefault();
+            window.open(BOOKING_URL, "_blank", "noopener");
+          });
+        }
+      }
+    });
+
+    // Year in footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
