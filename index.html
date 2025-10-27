@@ -1,551 +1,62 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Omnisoft LLC</title>
-  <meta name="description" content="Branding and websites for small businesses. Clear identity, clean design, fast pages." />
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-white text-gray-900 antialiased">
+<div class="relative">
+  <div class="rounded-2xl border border-black/10 shadow-2xl bg-white overflow-hidden ring-1 ring-black/5 text-[11px] leading-[1.4]">
 
-  <!-- NAV -->
-  <nav class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-white/75 border-b border-black/5">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="h-20 md:h-24 flex items-center justify-between">
-        <a href="#" aria-label="Omnisoft LLC home" class="shrink-0">
-          <img src="assets/logo.png" alt="Omnisoft LLC" class="h-16 md:h-20 w-auto object-contain" />
-        </a>
-        <div class="hidden md:flex items-center gap-6">
-          <a href="#services-detail" class="text-sm font-medium text-gray-700 hover:text-gray-900">Services</a>
-          <a href="#products" class="text-sm font-medium text-gray-700 hover:text-gray-900">Products</a>
-          <a href="#pricing" class="text-sm font-medium text-gray-700 hover:text-gray-900">Pricing</a>
-          <a href="#contact" class="text-sm font-medium text-gray-700 hover:text-gray-900">Contact</a>
-        </div>
-        <a href="#contact"
-           class="inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-[#1672C4] hover:bg-[#0F63B0] text-white shadow-md hover:shadow-lg transition">
-          Get a quote
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="relative overflow-hidden pt-28 md:pt-32 pb-16 bg-gradient-to-b from-white via-cyan-50 to-white">
-    <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-orange-200/40 blur-3xl"></div>
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-          Branding, websites, and internal tools that help teams move faster and help customers say
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">yes</span>.
-        </h1>
-        <p class="mt-4 text-lg text-gray-700">
-          We build clear brand systems, fast modern sites, and focused in-house utilities. Consistent message, faster answers, less noise.
-        </p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#book"
-             class="book-cta inline-flex items-center justify-center rounded-2xl px-5 py-2.5 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg active:translate-y-px transition">
-            Book a discovery call
-          </a>
-          <a href="#services-detail"
-             class="inline-flex items-center justify-center rounded-2xl px-5 py-2.5 text-sm font-semibold border border-cyan-600 text-cyan-700 hover:bg-cyan-50 shadow-sm hover:shadow transition">
-            What we do
-          </a>
-        </div>
-        <div class="mt-6 text-sm text-gray-600">
-          Serving Central Virginia • Remote nationwide • Insured and documented process
-        </div>
+    <!-- header bar -->
+    <div class="flex items-center justify-between px-4 py-3 border-b border-black/10 bg-white">
+      <div class="flex items-center space-x-2">
+        <span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>
+        <img
+          src="assets/ManifestoLogo.png"
+          alt="Manifesto logo"
+          class="h-14 w-auto object-contain"
+        />
       </div>
 
-      <!-- Pop-out card -->
-      <div class="relative">
-        <div class="absolute -inset-3 rounded-3xl bg-gradient-to-r from-orange-400 to-cyan-500 opacity-40 blur-2xl"></div>
-        <div class="relative rounded-3xl bg-white/90 backdrop-blur ring-1 ring-black/5 shadow-2xl">
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-[#1672C4] inline-flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 4l1.5 3L14 9l-3.5 2L9 14l-1.5-3L4 9l3.5-2L9 4zm7 6l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z"/></svg>
-              <span>Quick wins we deliver</span>
-            </h3>
-            <ul class="mt-4 space-y-2 text-sm text-gray-700">
-              <li class="flex gap-2"><span class="mt-0.5">•</span><span>Logo refresh and brand kit</span></li>
-              <li class="flex gap-2"><span class="mt-0.5">•</span><span>Style guide and social templates</span></li>
-              <li class="flex gap-2"><span class="mt-0.5">•</span><span>Launch ready landing page</span></li>
-            </ul>
-          </div>
+      <div class="h-8 w-8 flex items-center justify-center rounded-lg border border-gray-300 text-gray-700 text-[10px] font-medium leading-none shadow-sm">
+        <div class="flex flex-col space-y-1">
+          <span class="block h-0.5 w-4 bg-gray-700 rounded"></span>
+          <span class="block h-0.5 w-4 bg-gray-700 rounded"></span>
+          <span class="block h-0.5 w-4 bg-gray-700 rounded"></span>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- SERVICES (combined summary + detail) -->
-  <section id="services-detail" class="py-16 bg-gradient-to-b from-white to-orange-50/40">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <h2 class="text-3xl md:text-4xl font-bold">Services</h2>
-        <p class="mt-3 text-gray-700">Clear identity. Clean design. Simple care.</p>
-      </div>
-
-      <!-- top row: three high-level cards -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-        <!-- Branding -->
-        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1">
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-[#1672C4] inline-flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h8v6H3zM13 7h8M13 11h5"/></svg>
-              <span>Branding</span>
-            </h3>
-            <ul class="mt-3 space-y-2 text-sm text-gray-700">
-              <li>Logo and wordmark</li>
-              <li>Color and type system</li>
-              <li>Voice and messaging guide</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Websites -->
-        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1">
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-[#1672C4] inline-flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4zM9 9l-3 3 3 3M15 9l3 3-3 3"/></svg>
-              <span>Websites</span>
-            </h3>
-            <ul class="mt-3 space-y-2 text-sm text-gray-700">
-              <li>Site map and content plan</li>
-              <li>Modern responsive build</li>
-              <li>Basic search discovery setup</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Brand assets -->
-        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1">
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-[#1672C4] inline-flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 4h12v16l-6-3-6 3V4z"/></svg>
-              <span>Brand assets</span>
-            </h3>
-            <ul class="mt-3 space-y-2 text-sm text-gray-700">
-              <li>Business cards and print files</li>
-              <li>Social media kit</li>
-              <li>Pitch deck template</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- detail intro -->
-      <div class="mx-auto max-w-4xl">
-        <h2 class="text-3xl md:text-4xl font-bold">Services in <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">Detail</span></h2>
-        <p class="mt-3 mb-10 text-gray-700 max-w-3xl">Each stage builds on the last so your brand and site stay in sync.</p>
-
-        <!-- Discovery Call -->
-        <div class="mb-12">
-          <h3 class="text-xl font-semibold text-[#1672C4] inline-flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h8v6H3zM13 7h8M13 11h5"/></svg>
-            <span>Discovery call</span>
-          </h3>
-          <p class="mt-2 text-gray-700 text-sm">We listen and map your goals, audience, and constraints. This gives us a clear path for the work that follows.</p>
-          <div class="mt-4 grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 class="text-sm font-semibold text-gray-900">What is included</h4>
-              <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
-                <li>Thirty to forty five minute call</li>
-                <li>Audience and offer review</li>
-                <li>Risk and priorities checklist</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="text-sm font-semibold text-gray-900">What you receive</h4>
-              <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
-                <li>Plain language summary</li>
-                <li>Recommended next steps</li>
-                <li>Clear estimate</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="my-8 h-px bg-black/5"></div>
-
-        <!-- Branding detail -->
-        <div class="mb-12">
-          <h3 class="text-xl font-semibold text-[#1672C4] inline-flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 4h12v16l-6-3-6 3V4z"/></svg>
-            <span>Branding</span>
-          </h3>
-          <p class="mt-2 text-gray-700 text-sm">A clear identity that makes sense to your team and your market. We design marks, choose color and type, and write a short voice guide.</p>
-          <div class="mt-4 grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 class="text-sm font-semibold text-gray-900">What is included</h4>
-              <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
-                <li>Logo and mark set with exports</li>
-                <li>Color and type system</li>
-                <li>Voice and messaging guide</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="text-sm font-semibold text-gray-900">What you receive</h4>
-              <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
-                <li>Brand kit folder with files</li>
-                <li>Style guide PDF</li>
-                <li>Social and print templates</li>
-              </ul>
-              <p class="mt-3 text-xs text-gray-600">Great for a new venture or a clean refresh.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="my-8 h-px bg-black/5"></div>
-
-        <!-- Websites detail -->
-        <div>
-          <h3 class="text-xl font-semibold text-[#1672C4] inline-flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4zM9 9l-3 3 3 3M15 9l3 3-3 3"/></svg>
-            <span>Website building</span>
-          </h3>
-          <p class="mt-2 text-gray-700 text-sm">A clear path from plan to launch. We gather content, design clean pages, build fast templates, and test before go live.</p>
-          <div class="mt-4 grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 class="text-sm font-semibold text-gray-900">What is included</h4>
-              <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
-                <li>Content and site map plan</li>
-                <li>Modern design with your brand</li>
-                <li>Accessible mobile friendly build</li>
-                <li>Booking embed and email setup when needed</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="text-sm font-semibold text-gray-900">What you receive</h4>
-              <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
-                <li>Live site with clear pages</li>
-                <li>Basic Google discovery setup</li>
-                <li>Short update guide for your team</li>
-              </ul>
-              <p class="mt-3 text-xs text-gray-600">Projects start at three thousand dollars and scale with page count and integrations.</p>
-            </div>
-          </div>
-        </div>
-      </div> <!-- /max-w-4xl -->
+    <!-- breadcrumb / path bar -->
+    <div class="px-4 py-2 text-[10px] font-medium text-gray-600 bg-white border-b border-black/10 font-mono">
+      <span class="text-gray-500">Z:\ > DEVBOX > </span>
+      <span class="text-[#c47a00]">Dev_index_html</span>
     </div>
-  </section>
 
-  <!-- PRODUCTS (Manifesto spotlight) -->
-  <section id="products" class="py-16 bg-gradient-to-b from-white to-orange-50/20 border-y border-black/5">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <h2 class="text-3xl md:text-4xl font-bold">Products</h2>
-        <p class="mt-3 text-gray-700 max-w-2xl mx-auto">Focused internal tools built and deployed by Omnisoft. Faster answers for devs, less risk and less noise for ops.</p>
+    <!-- log viewer body -->
+    <div class="p-6">
+      <div class="rounded-xl bg-gray-900 text-gray-100 p-4 font-mono text-[10px] leading-relaxed overflow-hidden shadow-inner shadow-black/20">
+        <div class="text-orange-400">&gt; tail error.log</div>
+        <div>[12:14:33] [AUTH] Token failure for user svc-api</div>
+        <div>[12:14:33] [AUTH] Reason: expired session</div>
+        <div class="text-green-400">[12:14:35] [REISSUE] New token granted</div>
+        <div>[12:14:35] [REQUEST] POST /v1/patient/lookup 200 OK</div>
+        <div class="text-gray-500">// no server login required</div>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-10 items-start">
-
-        <!-- left: copy -->
-        <div class="max-w-xl">
-          <!-- Product name row with logo -->
-          <div class="flex items-start gap-4">
-            <img
-                  src="assets/ManifestoLogo.png"
-                  alt="Manifesto logo"
-                  class="h-12 md:h-14 w-auto object-contain"
-                />
-              </div>
-
-              <div class="h-8 w-8 flex items-center justify-center rounded-lg border border-gray-300 text-gray-700 text-[10px] font-medium leading-none shadow-sm">
-                <div class="flex flex-col space-y-1">
-                  <span class="block h-0.5 w-4 bg-gray-700 rounded"></span>
-                  <span class="block h-0.5 w-4 bg-gray-700 rounded"></span>
-                  <span class="block h-0.5 w-4 bg-gray-700 rounded"></span>
-                </div>
-              </div>
-            </div>
-
-            <!-- breadcrumb / path bar -->
-            <div class="px-4 py-2 text-[10px] font-medium text-gray-600 bg-white border-b border-black/10 font-mono">
-              <span class="text-gray-500">Z:\ > DEVBOX > </span>
-              <span class="text-[#c47a00]">Dev_index_html</span>
-            </div>
-
-            <!-- log viewer body -->
-            <div class="p-6">
-              <div class="rounded-xl bg-gray-900 text-gray-100 p-4 font-mono text-[10px] leading-relaxed overflow-hidden shadow-inner shadow-black/20">
-                <div class="text-orange-400">&gt; tail error.log</div>
-                <div>[12:14:33] [AUTH] Token failure for user svc-api</div>
-                <div>[12:14:33] [AUTH] Reason: expired session</div>
-                <div class="text-green-400">[12:14:35] [REISSUE] New token granted</div>
-                <div>[12:14:35] [REQUEST] POST /v1/patient/lookup 200 OK</div>
-                <div class="text-gray-500">// no server login required</div>
-              </div>
-
-              <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-[12px] leading-snug">
-                <div class="bg-gray-50 rounded-xl p-4 border border-black/10 shadow-sm">
-                  <div class="text-gray-900 font-semibold text-[12px] leading-snug">Access model</div>
-                  <div class="text-gray-600 text-[10px] leading-snug mt-1">
-                    Devs can read logs. Infra keeps control.
-                  </div>
-                </div>
-
-                <div class="bg-gray-50 rounded-xl p-4 border border-black/10 shadow-sm">
-                  <div class="text-gray-900 font-semibold text-[12px] leading-snug">Footprint</div>
-                  <div class="text-gray-600 text-[10px] leading-snug mt-1">
-                    Lightweight utility. No intrusive agents.
-                  </div>
-                </div>
-              </div>
-
-              <div class="mt-6 text-[10px] text-gray-400 text-right font-mono">
-                © 2025 Omnisoft. All rights reserved.
-              </div>
-            </div>
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-[12px] leading-snug">
+        <div class="bg-gray-50 rounded-xl p-4 border border-black/10 shadow-sm">
+          <div class="text-gray-900 font-semibold text-[12px] leading-snug">Access model</div>
+          <div class="text-gray-600 text-[10px] leading-snug mt-1">
+            Devs can read logs. Infra keeps control.
           </div>
         </div>
 
-      </div> <!-- /grid -->
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section id="pricing" class="py-16 bg-gradient-to-b from-white to-orange-50/40">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <h2 class="text-3xl md:text-4xl font-bold">Pricing</h2>
-        <p class="mt-3 text-gray-700">Simple starting points. Final quotes reflect scope and goals.</p>
-        <p class="mt-2 text-gray-700 max-w-3xl mx-auto">
-          Every project begins with a free discovery call.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-6 items-stretch">
-        <!-- Brand Starter -->
-        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1 h-full flex flex-col">
-          <div class="p-6 space-y-1">
-            <h3 class="text-lg font-semibold">Brand starter</h3>
-            <div class="text-2xl font-bold">From $1,500</div>
-            <div class="text-xs text-gray-600">Two to three weeks</div>
+        <div class="bg-gray-50 rounded-xl p-4 border border-black/10 shadow-sm">
+          <div class="text-gray-900 font-semibold text-[12px] leading-snug">Footprint</div>
+          <div class="text-gray-600 text-[10px] leading-snug mt-1">
+            Lightweight utility. No intrusive agents.
           </div>
-          <div class="p-6 pt-0 flex-1 flex flex-col">
-            <ul class="space-y-2 text-sm text-gray-700">
-              <li>Logo and basic kit</li>
-              <li>Color and type picks</li>
-              <li>Mini guide</li>
-            </ul>
-            <a href="#book"
-               class="book-cta mt-6 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg active:translate-y-px transition w-full">
-              Book a call
-            </a>
-          </div>
-        </div>
-
-        <!-- Brand System -->
-        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1 h-full flex flex-col">
-          <div class="p-6 space-y-1">
-            <h3 class="text-lg font-semibold">Brand identity system</h3>
-            <div class="text-2xl font-bold">From $3,000</div>
-            <div class="text-xs text-gray-600">Four to six weeks</div>
-          </div>
-          <div class="p-6 pt-0 flex-1 flex flex-col">
-            <ul class="space-y-2 text-sm text-gray-700">
-              <li>Full mark set and exports</li>
-              <li>Style guide PDF</li>
-              <li>Social and print templates</li>
-            </ul>
-            <a href="#book"
-               class="book-cta mt-6 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg active:translate-y-px transition w-full">
-              Book a call
-            </a>
-          </div>
-        </div>
-
-        <!-- Website Starter -->
-        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1 h-full flex flex-col">
-          <div class="p-6 space-y-1">
-            <h3 class="text-lg font-semibold">Website starter</h3>
-            <div class="text-2xl font-bold">From $3,000</div>
-            <div class="text-xs text-gray-600">Scope based</div>
-          </div>
-          <div class="p-6 pt-0 flex-1 flex flex-col">
-            <ul class="space-y-2 text-sm text-gray-700">
-              <li>Site map and content plan</li>
-              <li>Modern responsive build</li>
-              <li>Basic search discovery setup</li>
-            </ul>
-            <a href="#book"
-               class="book-cta mt-6 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg active:translate-y-px transition w-full">
-              Book a call
-            </a>
-          </div>
-        </div>
-
-        <!-- Website Pro -->
-        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1 h-full flex flex-col">
-          <div class="p-6 space-y-1">
-            <h3 class="text-lg font-semibold">Website pro</h3>
-            <div class="text-2xl font-bold">Custom quote</div>
-            <div class="text-xs text-gray-600">Larger scope</div>
-          </div>
-          <div class="p-6 pt-0 flex-1 flex flex-col">
-            <ul class="space-y-2 text-sm text-gray-700">
-              <li>More pages and content</li>
-              <li>Booking and light forms</li>
-              <li>Extra integrations</li>
-            </ul>
-            <a href="#book"
-               class="book-cta mt-6 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg active:translate-y-px transition w-full">
-              Book a call
-            </a>
-          </div>
-        </div>
-
-        <!-- Omnisoft products -->
-        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1 h-full flex flex-col">
-          <div class="p-6 space-y-1">
-            <h3 class="text-lg font-semibold">Omnisoft products</h3>
-            <div class="text-2xl font-bold">Call for details</div>
-            <div class="text-xs text-gray-600">Licensing & install</div>
-          </div>
-          <div class="p-6 pt-0 flex-1 flex flex-col">
-            <ul class="space-y-2 text-sm text-gray-700">
-              <li>Manifesto secure log access utility</li>
-              <li>Internal diagnostics / support tools</li>
-              <li>Scoped access model (no full server login)</li>
-            </ul>
-            <a href="#contact"
-               class="book-cta mt-6 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg active:translate-y-px transition w-full">
-              Inquire about this product
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <p class="mt-6 text-center text-xs text-gray-600">
-        Project work only. We no longer offer technical support or knowledge base services.
-      </p>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="py-16 bg-gradient-to-b from-cyan-50/60 to-white">
-    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-8">
-        <h2 class="text-3xl md:text-4xl font-bold">Get a quote</h2>
-        <p class="mt-3 text-gray-700">Tell us about your brand or site. We will reply the same day with options.</p>
-      </div>
-      <div class="rounded-2xl border border-black/10 bg-white shadow-md">
-        <div class="p-6">
-          <form class="grid gap-4">
-            <div class="grid md:grid-cols-2 gap-4">
-              <label class="text-sm font-medium">Name
-                <input class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Jane Doe" />
-              </label>
-              <label class="text-sm font-medium">Email
-                <input class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="you@company.com" />
-              </label>
-            </div>
-            <label class="text-sm font-medium">Company
-              <input class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Your LLC or Inc" />
-            </label>
-            <label class="text-sm font-medium">What do you need?
-              <textarea class="mt-1 w-full rounded-xl border px-3 py-2 min-h-[120px]" placeholder="e.g., new logo, brand refresh, landing page, full site"></textarea>
-            </label>
-            <div class="flex items-center justify-between">
-              <div class="text-xs text-gray-600">Or email us directly:
-                <a class="underline ml-1" href="mailto:hello@omnisoftllc.org">hello@omnisoftllc.org</a>
-              </div>
-              <button type="submit"
-                      class="inline-flex items-center justify-center rounded-2xl px-5 py-2.5 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg active:translate-y-px transition">
-                Send
-              </button>
-            </div>
-          </form>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="py-12 border-t bg-white">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <a href="#" class="flex items-center gap-3">
-        <img src="assets/logo.png" alt="Omnisoft LLC" class="h-10 md:h-12 w-auto object-contain shrink-0" />
-        <span class="sr-only">Omnisoft LLC</span>
-      </a>
-
-      <div class="text-sm text-gray-600 text-center md:text-left">
-        © <span id="y"></span> Omnisoft LLC • Central Virginia •
-        <a class="underline" href="mailto:hello@omnisoftllc.org">hello@omnisoftllc.org</a><br>
-        <span class="block mt-1 text-xs">
-          We respect your privacy. Information you share is used only to provide our services and is never sold.
-          <a href="privacy.html" class="underline">Privacy Policy</a>.
-        </span>
-      </div>
-
-      <div class="flex items-center gap-4 text-sm">
-        <a href="#services-detail" class="hover:underline">Services</a>
-        <a href="#products" class="hover:underline">Products</a>
-        <a href="#pricing" class="hover:underline">Pricing</a>
-        <a href="#contact" class="hover:underline">Contact</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- BOOKING MODAL + TOAST -->
-  <div id="bookingModal" class="fixed inset-0 z-[60] hidden">
-    <div class="absolute inset-0 bg-black/50" data-close-modal></div>
-    <div class="absolute inset-0 flex items-center justify-center p-4">
-      <div class="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden">
-        <div class="flex items-center justify-between px-4 py-3 border-b">
-          <h3 class="text-lg font-semibold">Book a discovery call</h3>
-          <button class="rounded-lg px-3 py-1.5 text-sm border border-black/10 hover:bg-gray-50" data-close-modal>Close</button>
-        </div>
-        <div class="h-[75vh]">
-          <iframe id="bookingFrame" title="Microsoft Bookings" class="w-full h-full" src="" allowtransparency="true"></iframe>
-        </div>
-        <div class="px-4 py-3 border-t text-right">
-          <a id="openInNewTab" href="#" target="_blank" rel="noopener"
-             class="inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold border border-black/10 text-gray-800 hover:bg-gray-50">
-            Open in new tab
-          </a>
-        </div>
+      <div class="mt-6 text-[10px] text-gray-400 text-right font-mono">
+        © 2025 Omnisoft. All rights reserved.
       </div>
     </div>
   </div>
-
-  <div id="toast" class="fixed bottom-4 right-4 z-[70] hidden rounded-xl bg-gray-900 text-white text-sm px-4 py-3 shadow-lg">
-    <span id="toastMsg">Thanks. If you booked, check your email for the confirmation.</span>
-  </div>
-
-  <script>
-    // Footer year
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Bookings
-    const BOOKING_URL = "https://outlook.office365.com/owa/calendar/Inquiries1@omnisoftllc.org/bookings/?ismsaljsauthenabled";
-    const modal = document.getElementById('bookingModal');
-    const iframe = document.getElementById('bookingFrame');
-    const openInNewTab = document.getElementById('openInNewTab');
-
-    function openBooking() {
-      iframe.src = BOOKING_URL;
-      openInNewTab.href = BOOKING_URL.replace(/([?&])embed=true(&|$)/, "$1").replace(/[?&]$/, "");
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-      setTimeout(() => {
-        try { const host = iframe.contentWindow.location.host; if (host === window.location.host) window.open(openInNewTab.href, "_blank", "noopener"); } catch (_) {}
-      }, 1500);
-    }
-
-    function closeBooking() {
-      modal.classList.add('hidden');
-      document.body.style.overflow = '';
-      const toastEl = document.getElementById('toast');
-      toastEl.classList.remove('hidden');
-      clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(() => toastEl.classList.add('hidden'), 4000);
-    }
-
-    document.querySelectorAll('.book-cta').forEach(el => {
-      el.addEventListener('click', e => { e.preventDefault(); openBooking(); });
-    });
-    modal.addEventListener('click', e => { if (e.target.matches('[data-close-modal]')) closeBooking(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeBooking(); });
-  </script>
-</body>
-</html>
+</div>
