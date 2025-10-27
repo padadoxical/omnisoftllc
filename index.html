@@ -18,12 +18,12 @@
         </a>
         <div class="hidden md:flex items-center gap-6">
           <a href="#services-detail" class="text-sm font-medium text-gray-700 hover:text-gray-900">Services</a>
+          <a href="#products" class="text-sm font-medium text-gray-700 hover:text-gray-900">Products</a>
           <a href="#pricing" class="text-sm font-medium text-gray-700 hover:text-gray-900">Pricing</a>
           <a href="#contact" class="text-sm font-medium text-gray-700 hover:text-gray-900">Contact</a>
         </div>
         <a href="#contact"
-           class="inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold
-                  bg-[#1672C4] hover:bg-[#0F63B0] text-white shadow-md hover:shadow-lg transition">
+           class="inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-[#1672C4] hover:bg-[#0F63B0] text-white shadow-md hover:shadow-lg transition">
           Get a quote
         </a>
       </div>
@@ -36,11 +36,11 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
       <div>
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-          Branding and websites that help customers say
+          Branding, websites, and internal tools that help teams move faster and help customers say
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">yes</span>.
         </h1>
         <p class="mt-4 text-lg text-gray-700">
-          We craft clear identity systems and fast modern sites. Your message stays consistent everywhere and your pages load quickly on any device.
+          We build clear brand systems, fast modern sites, and focused in-house utilities. Consistent message, faster answers, less noise.
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="#book"
@@ -62,7 +62,10 @@
         <div class="absolute -inset-3 rounded-3xl bg-gradient-to-r from-orange-400 to-cyan-500 opacity-40 blur-2xl"></div>
         <div class="relative rounded-3xl bg-white/90 backdrop-blur ring-1 ring-black/5 shadow-2xl">
           <div class="p-6">
-            <h3 class="text-lg font-semibold text-[#1672C4] inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 4l1.5 3L14 9l-3.5 2L9 14l-1.5-3L4 9l3.5-2L9 4zm7 6l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z"/></svg><span>Quick wins we deliver</span></h3>
+            <h3 class="text-lg font-semibold text-[#1672C4] inline-flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 4l1.5 3L14 9l-3.5 2L9 14l-1.5-3L4 9l3.5-2L9 4zm7 6l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z"/></svg>
+              <span>Quick wins we deliver</span>
+            </h3>
             <ul class="mt-4 space-y-2 text-sm text-gray-700">
               <li class="flex gap-2"><span class="mt-0.5">•</span><span>Logo refresh and brand kit</span></li>
               <li class="flex gap-2"><span class="mt-0.5">•</span><span>Style guide and social templates</span></li>
@@ -74,83 +77,179 @@
     </div>
   </section>
 
-  <!-- SERVICES (summary cards) -->
-  <section id="services" class="py-16">
+  <!-- SERVICES (combined summary + detail) -->
+  <section id="services-detail" class="py-16 bg-gradient-to-b from-white to-orange-50/40">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
         <h2 class="text-3xl md:text-4xl font-bold">Services</h2>
         <p class="mt-3 text-gray-700">Clear identity. Clean design. Simple care.</p>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- top row: three high-level cards -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
         <!-- Branding -->
         <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1">
           <div class="p-6">
-            <h3 class="text-lg font-semibold text-[#1672C4] inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h8v6H3zM13 7h8M13 11h5"/></svg><span>Branding</span></h3>
+            <h3 class="text-lg font-semibold text-[#1672C4] inline-flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h8v6H3zM13 7h8M13 11h5"/></svg>
+              <span>Branding</span>
+            </h3>
             <ul class="mt-3 space-y-2 text-sm text-gray-700">
               <li>Logo and wordmark</li>
               <li>Color and type system</li>
               <li>Voice and messaging guide</li>
             </ul>
-            <a href="#services-detail" class="mt-3 inline-block text-sm text-[#1672C4] underline">See details</a>
           </div>
         </div>
         <!-- Websites -->
         <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1">
           <div class="p-6">
-            <h3 class="text-lg font-semibold text-[#1672C4] inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4zM9 9l-3 3 3 3M15 9l3 3-3 3"/></svg><span>Websites</span></h3>
+            <h3 class="text-lg font-semibold text-[#1672C4] inline-flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4zM9 9l-3 3 3 3M15 9l3 3-3 3"/></svg>
+              <span>Websites</span>
+            </h3>
             <ul class="mt-3 space-y-2 text-sm text-gray-700">
               <li>Site map and content plan</li>
               <li>Modern responsive build</li>
               <li>Basic search discovery setup</li>
             </ul>
-            <a href="#services-detail" class="mt-3 inline-block text-sm text-[#1672C4] underline">See details</a>
           </div>
         </div>
-        <!-- Add on -->
+        <!-- Brand assets -->
         <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1">
           <div class="p-6">
-            <h3 class="text-lg font-semibold text-[#1672C4] inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 4h12v16l-6-3-6 3V4z"/></svg><span>Brand assets</span></h3>
+            <h3 class="text-lg font-semibold text-[#1672C4] inline-flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 4h12v16l-6-3-6 3V4z"/></svg>
+              <span>Brand assets</span>
+            </h3>
             <ul class="mt-3 space-y-2 text-sm text-gray-700">
               <li>Business cards and print files</li>
               <li>Social media kit</li>
               <li>Pitch deck template</li>
             </ul>
-            <a href="#services-detail" class="mt-3 inline-block text-sm text-[#1672C4] underline">See details</a>
           </div>
         </div>
       </div>
+
+      <!-- detail intro -->
+      <div class="mx-auto max-w-4xl">
+        <h2 class="text-3xl md:text-4xl font-bold">Services in <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">Detail</span></h2>
+        <p class="mt-3 mb-10 text-gray-700 max-w-3xl">Each stage builds on the last so your brand and site stay in sync.</p>
+
+        <!-- Discovery Call -->
+        <div class="mb-12">
+          <h3 class="text-xl font-semibold text-[#1672C4] inline-flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h8v6H3zM13 7h8M13 11h5"/></svg>
+            <span>Discovery call</span>
+          </h3>
+          <p class="mt-2 text-gray-700 text-sm">We listen and map your goals, audience, and constraints. This gives us a clear path for the work that follows.</p>
+          <div class="mt-4 grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="text-sm font-semibold text-gray-900">What is included</h4>
+              <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
+                <li>Thirty to forty five minute call</li>
+                <li>Audience and offer review</li>
+                <li>Risk and priorities checklist</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-gray-900">What you receive</h4>
+              <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
+                <li>Plain language summary</li>
+                <li>Recommended next steps</li>
+                <li>Clear estimate</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-8 h-px bg-black/5"></div>
+
+        <!-- Branding detail -->
+        <div class="mb-12">
+          <h3 class="text-xl font-semibold text-[#1672C4] inline-flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 4h12v16l-6-3-6 3V4z"/></svg>
+            <span>Branding</span>
+          </h3>
+          <p class="mt-2 text-gray-700 text-sm">A clear identity that makes sense to your team and your market. We design marks, choose color and type, and write a short voice guide.</p>
+          <div class="mt-4 grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="text-sm font-semibold text-gray-900">What is included</h4>
+              <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
+                <li>Logo and mark set with exports</li>
+                <li>Color and type system</li>
+                <li>Voice and messaging guide</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-gray-900">What you receive</h4>
+              <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
+                <li>Brand kit folder with files</li>
+                <li>Style guide PDF</li>
+                <li>Social and print templates</li>
+              </ul>
+              <p class="mt-3 text-xs text-gray-600">Great for a new venture or a clean refresh.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-8 h-px bg-black/5"></div>
+
+        <!-- Websites detail -->
+        <div>
+          <h3 class="text-xl font-semibold text-[#1672C4] inline-flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4zM9 9l-3 3 3 3M15 9l3 3-3 3"/></svg>
+            <span>Website building</span>
+          </h3>
+          <p class="mt-2 text-gray-700 text-sm">A clear path from plan to launch. We gather content, design clean pages, build fast templates, and test before go live.</p>
+          <div class="mt-4 grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="text-sm font-semibold text-gray-900">What is included</h4>
+              <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
+                <li>Content and site map plan</li>
+                <li>Modern design with your brand</li>
+                <li>Accessible mobile friendly build</li>
+                <li>Booking embed and email setup when needed</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-gray-900">What you receive</h4>
+              <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
+                <li>Live site with clear pages</li>
+                <li>Basic Google discovery setup</li>
+                <li>Short update guide for your team</li>
+              </ul>
+              <p class="mt-3 text-xs text-gray-600">Projects start at three thousand dollars and scale with page count and integrations.</p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /max-w-4xl -->
     </div>
   </section>
 
   <!-- PRODUCTS (Manifesto spotlight) -->
   <section id="products" class="py-16 bg-gradient-to-b from-white to-orange-50/20 border-y border-black/5">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <!-- header -->
-      <div class="max-w-3xl">
-        <div class="inline-flex items-center rounded-xl bg-orange-100 text-orange-600 text-xs font-medium px-3 py-1">
-          Products
-        </div>
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-4">
-          Purpose-built internal tools.
-        </h2>
-        <p class="mt-3 text-gray-700 text-base md:text-lg leading-relaxed">
-          We design focused utilities for small teams. Faster answers for devs,
-          less risk and less noise for ops.
-        </p>
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold">Products</h2>
+        <p class="mt-3 text-gray-700 max-w-2xl mx-auto">Focused internal tools built and deployed by Omnisoft. Faster answers for devs, less risk and less noise for ops.</p>
       </div>
 
-      <!-- content grid -->
-      <div class="mt-12 grid lg:grid-cols-2 gap-10 items-start">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
 
         <!-- left: copy -->
         <div class="max-w-xl">
-          <div class="inline-flex items-center gap-2 rounded-lg bg-[#003366] text-white text-[10px] font-semibold px-2 py-1 tracking-tight shadow-sm shadow-black/20">
-            <img src="assets/ManifestoLogo.png" class="h-4 w-4 rounded-sm border border-white/20 object-contain bg-white/10" alt="Manifesto logo">
-            <span>MANIFESTO</span>
+          <!-- Product name row with logo -->
+          <div class="flex items-start gap-4">
+            <img
+              src="assets/ManifestoLogo.png"
+              alt="Manifesto logo"
+              class="h-10 w-auto rounded-sm object-contain bg-white border border-gray-300 p-0.5 shadow-sm shadow-black/10"
+            />
           </div>
 
-          <h3 class="text-xl md:text-2xl font-semibold text-gray-900 tracking-tight mt-4">
-            Secure log access for developers
+          <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 tracking-tight mt-4">
+            Secure <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">log access</span> for developers
           </h3>
 
           <p class="mt-3 text-gray-700 text-sm leading-relaxed">
@@ -159,41 +258,28 @@
             login to production servers or VM's.
           </p>
 
-          <ul class="mt-6 space-y-3 text-sm text-gray-800">
+          <ul class="mt-6 space-y-4 text-sm text-gray-800">
             <li class="flex items-start">
-              <span class="flex-shrink-0 h-6 w-6 rounded-lg bg-orange-500 text-white text-[10px] font-bold flex items-center justify-center mr-3">
-                1
-              </span>
+              <span class="flex-shrink-0 h-6 w-6 rounded-lg bg-orange-500 text-white text-[10px] font-bold flex items-center justify-center mr-3">1</span>
               <span>Faster troubleshooting for developers</span>
             </li>
-
             <li class="flex items-start">
-              <span class="flex-shrink-0 h-6 w-6 rounded-lg bg-orange-500 text-white text-[10px] font-bold flex items-center justify-center mr-3">
-                2
-              </span>
+              <span class="flex-shrink-0 h-6 w-6 rounded-lg bg-orange-500 text-white text-[10px] font-bold flex items-center justify-center mr-3">2</span>
               <span>No RDP or shell access required</span>
             </li>
-
             <li class="flex items-start">
-              <span class="flex-shrink-0 h-6 w-6 rounded-lg bg-orange-500 text-white text-[10px] font-bold flex items-center justify-center mr-3">
-                3
-              </span>
+              <span class="flex-shrink-0 h-6 w-6 rounded-lg bg-orange-500 text-white text-[10px] font-bold flex items-center justify-center mr-3">3</span>
               <span>Less “can you pull logs for me?” noise on infrastructure</span>
             </li>
-
             <li class="flex items-start">
-              <span class="flex-shrink-0 h-6 w-6 rounded-lg bg-orange-500 text-white text-[10px] font-bold flex items-center justify-center mr-3">
-                4
-              </span>
+              <span class="flex-shrink-0 h-6 w-6 rounded-lg bg-orange-500 text-white text-[10px] font-bold flex items-center justify-center mr-3">4</span>
               <span>Lower risk than giving full production access</span>
             </li>
           </ul>
 
           <div class="mt-8">
-            <a
-              href="#contact"
-              class="inline-flex items-center justify-center rounded-xl bg-orange-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/30 hover:bg-orange-600 active:scale-[0.99] transition"
-            >
+            <a href="#contact"
+               class="inline-flex items-center justify-center rounded-xl bg-orange-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/30 hover:bg-orange-600 active:scale-[0.99] transition">
               Request access
             </a>
             <p class="text-xs text-gray-500 mt-3">
@@ -205,19 +291,17 @@
         <!-- right: app mock window -->
         <div class="relative">
           <div class="rounded-2xl border border-black/10 shadow-2xl bg-white overflow-hidden ring-1 ring-black/5 text-[11px] leading-[1.4]">
+
             <!-- header bar -->
             <div class="flex items-center justify-between px-4 py-3 border-b border-black/10 bg-white">
               <div class="flex items-center space-x-2">
                 <span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>
 
-                <div class="flex items-center text-[11px] font-semibold text-gray-900">
-                  <img
-                    src="assets/ManifestoLogo.png"
-                    alt="Manifesto logo"
-                    class="h-5 w-5 mr-2 rounded-sm object-contain bg-white border border-gray-300"
-                  />
-                  <span class="text-[#003366] font-extrabold tracking-tight text-[11px] leading-none">MANIFESTO</span>
-                </div>
+                <img
+                  src="assets/ManifestoLogo.png"
+                  alt="Manifesto logo"
+                  class="h-10 w-auto rounded-sm object-contain bg-white border border-gray-300 p-0.5"
+                />
               </div>
 
               <div class="h-8 w-8 flex items-center justify-center rounded-lg border border-gray-300 text-gray-700 text-[10px] font-medium leading-none shadow-sm">
@@ -231,7 +315,7 @@
 
             <!-- breadcrumb / path bar -->
             <div class="px-4 py-2 text-[10px] font-medium text-gray-600 bg-white border-b border-black/10 font-mono">
-              <span class="text-gray-500">Z:\ &gt; DEVBOX &gt; </span>
+              <span class="text-gray-500">Z:\ > DEVBOX > </span>
               <span class="text-[#c47a00]">Dev_index_html</span>
             </div>
 
@@ -246,7 +330,7 @@
                 <div class="text-gray-500">// no server login required</div>
               </div>
 
-              <div class="mt-6 grid grid-cols-2 gap-4 text-[12px] leading-snug">
+              <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-[12px] leading-snug">
                 <div class="bg-gray-50 rounded-xl p-4 border border-black/10 shadow-sm">
                   <div class="text-gray-900 font-semibold text-[12px] leading-snug">Access model</div>
                   <div class="text-gray-600 text-[10px] leading-snug mt-1">
@@ -273,94 +357,6 @@
     </div>
   </section>
 
-  <!-- DETAILED SERVICES -->
-  <section id="services-detail" class="py-16 bg-gradient-to-b from-white to-orange-50/40">
-    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl md:text-4xl font-bold">Services in <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">Detail</span></h2>
-      <p class="mt-3 mb-10 text-gray-700 max-w-3xl">Each stage builds on the last so your brand and site stay in sync.</p>
-
-      <!-- Discovery Call -->
-      <div class="mb-12">
-        <h3 class="text-xl font-semibold text-[#1672C4] inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h8v6H3zM13 7h8M13 11h5"/></svg><span>Discovery call</span></h3>
-        <p class="mt-2 text-gray-700 text-sm">We listen and map your goals, audience, and constraints. This gives us a clear path for the work that follows.</p>
-        <div class="mt-4 grid md:grid-cols-2 gap-6">
-          <div>
-            <h4 class="text-sm font-semibold text-gray-900">What is included</h4>
-            <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
-              <li>Thirty to forty five minute call</li>
-              <li>Audience and offer review</li>
-              <li>Risk and priorities checklist</li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="text-sm font-semibold text-gray-900">What you receive</h4>
-            <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
-              <li>Plain language summary</li>
-              <li>Recommended next steps</li>
-              <li>Clear estimate</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="my-8 h-px bg-black/5"></div>
-
-      <!-- Branding -->
-      <div class="mb-12">
-        <h3 class="text-xl font-semibold text-[#1672C4] inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 4h12v16l-6-3-6 3V4z"/></svg><span>Branding</span></h3>
-        <p class="mt-2 text-gray-700 text-sm">A clear identity that makes sense to your team and your market. We design marks, choose color and type, and write a short voice guide.</p>
-        <div class="mt-4 grid md:grid-cols-2 gap-6">
-          <div>
-            <h4 class="text-sm font-semibold text-gray-900">What is included</h4>
-            <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
-              <li>Logo and mark set with exports</li>
-              <li>Color and type system</li>
-              <li>Voice and messaging guide</li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="text-sm font-semibold text-gray-900">What you receive</h4>
-            <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
-              <li>Brand kit folder with files</li>
-              <li>Style guide PDF</li>
-              <li>Social and print templates</li>
-            </ul>
-            <p class="mt-3 text-xs text-gray-600">Great for a new venture or a clean refresh.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="my-8 h-px bg-black/5"></div>
-
-      <!-- Websites -->
-      <div>
-        <h3 class="text-xl font-semibold text-[#1672C4] inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4zM9 9l-3 3 3 3M15 9l3 3-3 3"/></svg><span>Website building</span></h3>
-        <p class="mt-2 text-gray-700 text-sm">A clear path from plan to launch. We gather content, design clean pages, build fast templates, and test before go live.</p>
-        <div class="mt-4 grid md:grid-cols-2 gap-6">
-          <div>
-            <h4 class="text-sm font-semibold text-gray-900">What is included</h4>
-            <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
-              <li>Content and site map plan</li>
-              <li>Modern design with your brand</li>
-              <li>Accessible mobile friendly build</li>
-              <li>Booking embed and email setup when needed</li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="text-sm font-semibold text-gray-900">What you receive</h4>
-            <ul class="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
-              <li>Live site with clear pages</li>
-              <li>Basic Google discovery setup</li>
-              <li>Short update guide for your team</li>
-            </ul>
-            <p class="mt-3 text-xs text-gray-600">Projects start at three thousand dollars and scale with page count and integrations.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
   <!-- PRICING -->
   <section id="pricing" class="py-16 bg-gradient-to-b from-white to-orange-50/40">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -372,7 +368,7 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
+      <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-6 items-stretch">
         <!-- Brand Starter -->
         <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1 h-full flex flex-col">
           <div class="p-6 space-y-1">
@@ -452,6 +448,27 @@
             </a>
           </div>
         </div>
+
+        <!-- Omnisoft products -->
+        <div class="rounded-2xl border border-black/10 bg-white shadow-md hover:shadow-xl hover:ring-1 hover:ring-black/10 transition transform-gpu hover:-translate-y-1 h-full flex flex-col">
+          <div class="p-6 space-y-1">
+            <h3 class="text-lg font-semibold">Omnisoft products</h3>
+            <div class="text-2xl font-bold">Call for details</div>
+            <div class="text-xs text-gray-600">Licensing & install</div>
+          </div>
+          <div class="p-6 pt-0 flex-1 flex flex-col">
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>Manifesto secure log access utility</li>
+              <li>Internal diagnostics / support tools</li>
+              <li>Scoped access model (no full server login)</li>
+            </ul>
+            <a href="#contact"
+               class="book-cta mt-6 inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-lg active:translate-y-px transition w-full">
+              Inquire about this product
+            </a>
+          </div>
+        </div>
+
       </div>
 
       <p class="mt-6 text-center text-xs text-gray-600">
@@ -518,13 +535,14 @@
 
       <div class="flex items-center gap-4 text-sm">
         <a href="#services-detail" class="hover:underline">Services</a>
+        <a href="#products" class="hover:underline">Products</a>
         <a href="#pricing" class="hover:underline">Pricing</a>
         <a href="#contact" class="hover:underline">Contact</a>
       </div>
     </div>
   </footer>
 
-  <!-- BOOKING MODAL + TOAST (kept, but language updated) -->
+  <!-- BOOKING MODAL + TOAST -->
   <div id="bookingModal" class="fixed inset-0 z-[60] hidden">
     <div class="absolute inset-0 bg-black/50" data-close-modal></div>
     <div class="absolute inset-0 flex items-center justify-center p-4">
